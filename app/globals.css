@@ -462,3 +462,460 @@ html[lang="hi"] h1,html[lang="hi"] h2,html[lang="hi"] h3{line-height:1.25;letter
 /* Eyebrow dot icon */
 .eyebrow .icon{font-size:7px;color:var(--orange);font-variation-settings:"FILL" 1,"wght" 700,"GRAD" 0,"opsz" 20;line-height:1;vertical-align:middle;margin-right:2px}
 .eyebrow-light .icon{color:#da9a5f}
+
+
+/* ═══════════════════════════════════════════════
+   MOBILE FIX — prevent font/layout collisions
+   Targets ≤ 650px (phones)
+   ═══════════════════════════════════════════════ */
+@media(max-width:650px){
+
+  /* ── EYEBROW: never wrap mid-label ── */
+  .eyebrow{
+    flex-wrap:nowrap;
+    white-space:nowrap;
+    overflow:hidden;
+    font-size:7px;
+    letter-spacing:.13em;
+    gap:6px;
+    max-width:100%;
+  }
+  .eyebrow .icon{
+    font-size:6px;
+    flex-shrink:0;
+  }
+
+  /* ── HERO H1: tighter size so "Make room" fits one line ── */
+  .hero h1{
+    font-size:clamp(42px,11.5vw,58px);
+    line-height:1.02;
+    margin:16px 0 14px;
+  }
+
+  /* ── HERO NOTE: stack icon + text neatly ── */
+  .hero-note{
+    flex-wrap:nowrap;
+    align-items:flex-start;
+    gap:10px;
+    margin-top:20px;
+  }
+  .note-icon{
+    flex-shrink:0;
+    width:30px;
+    height:30px;
+  }
+  .hero-note span:last-child{
+    min-width:0;
+  }
+  .hero-note b{
+    font-size:9px;
+    display:block;
+    line-height:1.4;
+  }
+  .hero-note small{
+    font-size:8px;
+    display:block;
+    line-height:1.5;
+    white-space:normal;
+  }
+
+  /* ── HERO ACTIONS: prevent button overflow ── */
+  .hero-actions{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:14px;
+    margin-top:20px;
+  }
+  .button{
+    width:auto;
+    max-width:100%;
+    min-height:46px;
+    padding:0 18px;
+    gap:12px;
+    font-size:11px;
+  }
+  .button .icon{
+    font-size:14px;
+    flex-shrink:0;
+  }
+
+  /* ── SECTION HEADING: fix "FIND YOUR MOMENT" wrap ── */
+  .section-heading{
+    display:block;
+    margin-bottom:24px;
+  }
+  .section-heading .eyebrow{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    max-width:100%;
+  }
+  .section-heading h2{
+    font-size:clamp(30px,9vw,38px);
+    line-height:1.1;
+    margin:12px 0 0;
+  }
+  .section-heading>p{
+    margin-top:10px;
+    font-size:11px;
+    max-width:100%;
+  }
+
+  /* ── INNER HERO: fix inner page headings ── */
+  .inner-hero{
+    padding:50px 20px 44px;
+  }
+  .inner-hero h1{
+    font-size:clamp(36px,10vw,52px);
+    margin:16px 0 12px;
+    line-height:1.05;
+  }
+  .inner-hero p{
+    font-size:12px;
+    line-height:1.7;
+    max-width:100%;
+  }
+  .inner-hero .eyebrow{
+    white-space:nowrap;
+    overflow:hidden;
+  }
+
+  /* ── PROGRAM CARDS: fix title overflow ── */
+  .program-card{
+    height:auto;
+    min-height:190px;
+    padding:14px 12px 14px;
+  }
+  .program-card strong{
+    font-size:18px;
+    line-height:1.15;
+    margin-top:8px;
+    word-break:break-word;
+    hyphens:auto;
+  }
+  .card-number{
+    font-size:7px;
+    letter-spacing:.1em;
+    margin-top:12px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .card-bottom{
+    font-size:8px;
+    margin-top:12px;
+  }
+
+  /* ── NAV CTA: icon alignment ── */
+  .nav-cta .icon{
+    font-size:13px;
+    vertical-align:middle;
+  }
+
+  /* ── SECTION MORE LINK ── */
+  .section-more{
+    font-size:10px;
+    gap:10px;
+    flex-wrap:nowrap;
+    white-space:nowrap;
+  }
+
+  /* ── AVAILABILITY NOTE ── */
+  .availability-note{
+    font-size:9px;
+    line-height:1.6;
+    display:flex;
+    align-items:flex-start;
+    gap:6px;
+  }
+  .availability-note .icon{
+    flex-shrink:0;
+    margin-top:1px;
+    font-size:11px;
+  }
+
+  /* ── VIDEO CARDS: info text clipping ── */
+  .video-info small{
+    font-size:7px;
+    letter-spacing:.08em;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+  .video-info strong{
+    font-size:13px;
+    line-height:1.2;
+  }
+  .video-info>span{
+    font-size:8px;
+    display:flex;
+    align-items:center;
+    gap:4px;
+  }
+
+  /* ── STEPS SECTION ── */
+  .steps-grid{
+    gap:18px;
+  }
+  .steps-grid h3{
+    font-size:16px;
+    line-height:1.25;
+  }
+  .steps-grid p{
+    font-size:10px;
+    max-width:100%;
+  }
+
+  /* ── QUOTE BAND ── */
+  .quote-band p{
+    font-size:20px;
+    line-height:1.35;
+  }
+
+  /* ── FAQ SUMMARY: prevent icon collision ── */
+  .faq-list summary{
+    font-size:12px;
+    padding:15px 0;
+    align-items:flex-start;
+    gap:10px;
+  }
+  .faq-list summary .icon{
+    flex-shrink:0;
+    margin-top:2px;
+  }
+
+  /* ── TRADITIONS PREVIEW GRID ── */
+  .trad-preview-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:8px;
+  }
+  .trad-preview-card{
+    padding:16px 10px 14px;
+    gap:6px;
+  }
+  .trad-preview-hindi{
+    font-size:16px;
+  }
+  .trad-preview-name{
+    font-size:8px;
+  }
+
+  /* ── ARTIST PREVIEW GRID ── */
+  .artist-preview-grid{
+    grid-template-columns:1fr 1fr;
+    gap:9px;
+  }
+  .artist-preview-card{
+    padding:16px 12px 14px;
+  }
+  .apcard-initial{
+    width:38px;
+    height:38px;
+    font-size:17px;
+  }
+  .apcard-name{
+    font-size:15px;
+    line-height:1.15;
+  }
+  .apcard-specialty{
+    font-size:7px;
+  }
+
+  /* ── LAST CTA ── */
+  .last-cta h2{
+    font-size:clamp(32px,9.5vw,42px);
+    line-height:1.08;
+  }
+
+  /* ── MANTRA BAND ── */
+  .mantra-band{
+    height:44px;
+  }
+  .mantra-scroll{
+    font-size:13px;
+  }
+
+  /* ── FOOTER LINKS WRAP ── */
+  .footer-links{
+    flex-wrap:wrap;
+    gap:12px 16px;
+    font-size:9px;
+  }
+
+  /* ── BREADCRUMB ── */
+  .breadcrumb{
+    flex-wrap:wrap;
+    gap:5px 8px;
+    font-size:9px;
+  }
+
+  /* ── DETAIL HERO (program slug page) ── */
+  .detail-hero h1{
+    font-size:clamp(36px,10vw,50px);
+    line-height:1.05;
+  }
+  .detail-hero p{
+    font-size:11px;
+    max-width:100%;
+  }
+
+  /* ── BOOKING ASIDE ── */
+  .booking-aside h1{
+    font-size:clamp(36px,10.5vw,50px);
+  }
+
+  /* ── FORM STEP HEADINGS ── */
+  .form-step h2,
+  .form-success h2{
+    font-size:clamp(28px,8.5vw,36px);
+    line-height:1.08;
+  }
+
+  /* ── CATALOG GRID ── */
+  .catalog-grid{
+    grid-template-columns:1fr 1fr;
+    gap:9px;
+  }
+  .catalog-copy strong{
+    font-size:14px;
+    line-height:1.2;
+  }
+  .catalog-copy small{
+    font-size:7px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+
+  /* ── TRADITION CARDS ── */
+  .trad-grid{
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+  .trad-card{
+    height:260px;
+  }
+  .trad-hindi{
+    font-size:22px;
+  }
+  .trad-glyph .icon{
+    font-size:32px;
+  }
+  .trad-cta-section h2{
+    font-size:clamp(28px,8vw,36px);
+  }
+
+  /* ── ARTIST CARDS ── */
+  .artists-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+  .artist-name{
+    font-size:22px;
+  }
+
+  /* ── CONTACT OPTIONS ── */
+  .contact-options{
+    grid-template-columns:1fr;
+    gap:10px;
+    padding:40px 20px 50px;
+  }
+
+  /* ── SUCCESS PAGE ── */
+  .success-card h1{
+    font-size:clamp(32px,9vw,46px);
+  }
+
+  /* ── MOBILE DOCK ── */
+  .mobile-dock{
+    height:60px;
+    padding:7px 12px calc(7px + env(safe-area-inset-bottom));
+    gap:8px;
+  }
+  .mobile-dock a,
+  .mobile-dock>a:last-child{
+    font-size:10px;
+    gap:6px;
+  }
+  .mobile-dock .icon{
+    font-size:15px;
+  }
+}
+
+/* ── Extra-small phones (≤ 390px) ── */
+@media(max-width:390px){
+  .hero h1{
+    font-size:clamp(38px,10.5vw,46px);
+  }
+  .program-card strong{
+    font-size:16px;
+  }
+  .section-heading h2{
+    font-size:30px;
+  }
+  .inner-hero h1{
+    font-size:34px;
+  }
+  .eyebrow{
+    font-size:6.5px;
+    letter-spacing:.11em;
+  }
+  .trad-preview-hindi{
+    font-size:14px;
+  }
+  .artist-preview-grid{
+    grid-template-columns:1fr;
+  }
+  .trad-grid{
+    grid-template-columns:1fr;
+  }
+  .catalog-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+/* Mobile layout corrections: preserve full labels, keep the hero artwork centered,
+   and give the sticky header/menu a solid, predictable layout. */
+.eyebrow > .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  flex: 0 0 auto;
+}
+.eyebrow > span:not(.icon) {
+  display: inline;
+  width: auto;
+  height: auto;
+  flex: 0 1 auto;
+}
+
+@media (max-width: 650px) {
+  .site-header {
+    margin-bottom: 0;
+  }
+
+  .nav {
+    z-index: 2;
+    background: #faf9f5;
+  }
+
+  .hero {
+    min-height: 700px;
+    padding-top: 40px;
+  }
+
+  .hero-art {
+    right: 50%;
+    bottom: -23px;
+    transform: translateX(50%);
+    opacity: .38;
+    animation: mobile-hero-float 6s ease-in-out infinite;
+  }
+}
+
+@keyframes mobile-hero-float {
+  0%, 100% { transform: translate(50%, 0); }
+  50% { transform: translate(50%, -8px); }
+}
