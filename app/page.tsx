@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { channelUrl, programs, videos, traditions, artists } from "@/lib/site-data";
+import { channelUrl, programs, videos, traditions } from "@/lib/site-data";
 import Localized from "@/components/localized";
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
@@ -18,29 +18,16 @@ export default function HomePage() {
       <span className="dp dp-7">ॐ</span>
     </div>
 
-    <section className="hero">
+    <section className="hero hero-3col">
       <div className="hero-bg" aria-hidden="true">
         <div className="sun-disc" />
         <div className="mandala mandala-a">✺</div>
         <div className="mandala mandala-b">✳</div>
         <div className="temple-line"><i /><i /><i /><b /></div>
       </div>
-      <div className="hero-content">
-        <div className="eyebrow"><span className="icon icon-sm" aria-hidden="true">fiber_manual_record</span> <Localized>BHAKTI, SHARED TOGETHER</Localized></div>
-        <h1><Localized>Make room</Localized><br /><Localized as="em">for devotion.</Localized></h1>
-        <p><Localized>From a quiet family gathering to a hall full of singing voices, find the sound for your occasion.</Localized></p>
-        <div className="hero-actions">
-          <Link className="button button-dark" href="/book"><Localized>Enquire for your event</Localized> <span className="icon" aria-hidden="true">north_east</span></Link>
-            <Link className="text-link" href="/videos">
-            <span className="play-icon"><span className="icon icon-filled" aria-hidden="true">play_arrow</span></span> <Localized>Hear the devotion</Localized>
-          </Link>
-        </div>
-        <div className="hero-note">
-          <span className="note-icon"><span className="icon" aria-hidden="true">music_note</span></span>
-          <span><b><Localized>A catalogue rooted in bhakti</Localized></b><small><Localized>Shiva · Hanuman · Ram · Krishna · Mata and more</Localized></small></span>
-        </div>
-      </div>
-      <div className="hero-art" aria-hidden="true">
+
+      {/* LEFT — Diya art */}
+      <div className="hero-art hero-art-left" aria-hidden="true">
         <div className="art-halo" />
         <div className="art-petal p1" />
         <div className="art-petal p2" />
@@ -54,6 +41,42 @@ export default function HomePage() {
         <div className="art-orbit orbit-two" />
         <div className="art-caption"><span>ॐ</span><small>श्रद्धा · संगीत · संगत</small></div>
       </div>
+
+      {/* CENTRE — Hero text */}
+      <div className="hero-content hero-content-centre">
+        <div className="eyebrow"><span className="icon icon-sm" aria-hidden="true">fiber_manual_record</span> <Localized>BHAKTI, SHARED TOGETHER</Localized></div>
+        <h1><Localized>Make room</Localized><br /><Localized as="em">for devotion.</Localized></h1>
+        <p><Localized>From a quiet family gathering to a hall full of singing voices, find the sound for your occasion.</Localized></p>
+        <div className="hero-actions">
+          <Link className="button button-dark" href="/book"><Localized>Enquire for your event</Localized> <span className="icon" aria-hidden="true">north_east</span></Link>
+          <Link className="text-link" href="/videos">
+            <span className="play-icon"><span className="icon icon-filled" aria-hidden="true">play_arrow</span></span> <Localized>Hear the devotion</Localized>
+          </Link>
+        </div>
+        <div className="hero-note">
+          <span className="note-icon"><span className="icon" aria-hidden="true">music_note</span></span>
+          <span><b><Localized>A catalogue rooted in bhakti</Localized></b><small><Localized>Shiva · Hanuman · Ram · Krishna · Mata and more</Localized></small></span>
+        </div>
+      </div>
+
+      {/* RIGHT — Photo of Pramod Ajmeriya */}
+      <div className="hero-photo-col" aria-hidden="true">
+        <div className="hero-photo-wrap">
+          <img
+            src="/pramod.png"
+            alt="Bhajan Samrat Pramod Ajmeriya"
+            className="hero-photo"
+            width={420}
+            height={560}
+          />
+          <div className="hero-photo-glow" />
+          <div className="hero-photo-name">
+            <span>Bhajan Samrat</span>
+            <strong>Pramod Ajmeriya</strong>
+          </div>
+        </div>
+      </div>
+
       <Link className="scroll-cue" href="#programs">
         <span className="icon" aria-hidden="true">south</span> <Localized>Discover the experience</Localized>
       </Link>
@@ -142,28 +165,6 @@ export default function HomePage() {
       </div>
     </section>
 
-    {/* Artists mini preview */}
-    <section className="section artists-preview" id="artists">
-      <div className="section-heading">
-        <div>
-          <div className="eyebrow"><span className="icon icon-sm" aria-hidden="true">fiber_manual_record</span> <Localized>VOICES OF DEVOTION</Localized></div>
-          <h2><Localized>The artists behind the bhajan.</Localized></h2>
-        </div>
-        <p><Localized>Meet the singers who bring the devotional spirit of the channel to life at private gatherings.</Localized></p>
-      </div>
-      <div className="artist-preview-grid">
-        {artists.map(a => (
-          <Link key={a.slug} className="artist-preview-card" href="/artists">
-            <span className="apcard-initial">{a.name.charAt(0)}</span>
-            <span className="apcard-specialty"><Localized>{a.specialty}</Localized></span>
-            <strong className="apcard-name">{a.name}</strong>
-            <span className="apcard-arrow"><Localized>Explore</Localized> <span className="icon" aria-hidden="true">north_east</span></span>
-          </Link>
-        ))}
-      </div>
-      <Link className="section-more" href="/artists"><Localized>Meet all artists</Localized> <span className="icon" aria-hidden="true">north_east</span></Link>
-    </section>
-
     <section className="section steps" id="about">
       <div className="section-heading">
         <div>
@@ -192,7 +193,7 @@ export default function HomePage() {
           <p><Localized>Once details and terms are agreed, you’ll know the next steps to confirm your program.</Localized></p>
         </article>
       </div>
-      <Link className="section-more" href="/about"><Localized>Learn about the channel</Localized> <span className="icon" aria-hidden="true">north_east</span></Link>
+      <Link className="section-more" href="/about"><Localized>Meet Bhajan Samrat Pramod Ajmeriya</Localized> <span className="icon" aria-hidden="true">north_east</span></Link>
     </section>
 
     <section className="quote-band">

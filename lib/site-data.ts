@@ -1,5 +1,9 @@
-export const bookingPhone = process.env.NEXT_PUBLIC_BOOKING_PHONE || "919899429419";
-export const displayPhone = process.env.NEXT_PUBLIC_BOOKING_DISPLAY_PHONE || "+91 98994 29419";
+export const bookingPhone = process.env.NEXT_PUBLIC_BOOKING_PHONE || "917906695961";
+export const displayPhone = process.env.NEXT_PUBLIC_BOOKING_DISPLAY_PHONE || "+91 79066 95961";
+export const bookingPhone2 = process.env.NEXT_PUBLIC_BOOKING_PHONE2 || "919557535987";
+export const displayPhone2 = process.env.NEXT_PUBLIC_BOOKING_DISPLAY_PHONE2 || "+91 95575 35987";
+export const bookingPhone3 = process.env.NEXT_PUBLIC_BOOKING_PHONE3 || "918630148164";
+export const displayPhone3 = process.env.NEXT_PUBLIC_BOOKING_DISPLAY_PHONE3 || "+91 86301 48164";
 export const channelUrl = "https://www.youtube.com/@Bhajankirtansonotek";
 
 export const programs = [
@@ -10,18 +14,14 @@ export const programs = [
 ];
 
 export const videos = [
-  { id: "jyvkvwywoko", title: "Balaji Jaungi", singer: "Riya Brajwasi", category: "Hanuman", subtitle: "Bala Ji Ke Bhajan" },
-  { id: "q7YqSWCeMNw", title: "Shiv Shankar Kailashi", singer: "Anjali Jain", category: "Shiva", subtitle: "Shiv Bhajan" },
-  { id: "ASB7jrGXFos", title: "Shiv Avtari Guru Gorakhnath Ji", singer: "Yashpreet Kaur · Rajesh Madina", category: "Katha", subtitle: "A devotional video from the channel" },
-  { id: "r_K0Lf_BCZU", title: "Maiya Mere Naina", singer: "Anjali Jain", category: "Mata", subtitle: "Mata Bhajan" },
-  { id: "pZDY5HXKQTU", title: "Ram Ji Ki Sena Chali", singer: "Riya Brajwasi", category: "Ram", subtitle: "Ram Bhajan" },
-  { id: "9zDSG_7cxEo", title: "Mere Ghar Ram Aaye Hain", singer: "Anjali Jain", category: "Ram", subtitle: "Ram Bhajan" },
-  { id: "Nt_JeRrV_D4", title: "Shiv Ji Ka Damru Baje", singer: "Yashpreet Kaur", category: "Shiva", subtitle: "Shiv Bhajan" },
-  { id: "CnVY0fUmfkg", title: "Tharo Mukut Chamke", singer: "Riya Brajwasi", category: "Krishna", subtitle: "Krishna Bhajan" },
-  { id: "K6HFMcwl-G4", title: "Jai Jai Bajrangbali", singer: "Rajesh Madina", category: "Hanuman", subtitle: "Hanuman Bhajan" },
-  { id: "UdZ3hQUuLWo", title: "Goga Ji Maharaj", singer: "Rajesh Madina", category: "Goga Ji", subtitle: "Goga Ji Bhajan" },
-  { id: "XMpDTMoLqgU", title: "Satsangi Bhajan Mala", singer: "Various Artists", category: "Satsangi", subtitle: "Nonstop Satsangi" },
-  { id: "b0oUszdGkX4", title: "Maa Ka Dil", singer: "Anjali Jain", category: "Mata", subtitle: "Mata Bhajan" },
+  { id: "bvYoTfjCmY0", title: "Hanuman Bhajan", singer: "Sonotek", category: "Hanuman", subtitle: "Hanuman Ji Bhajan" },
+  { id: "JSooAKbDF_Y", title: "Shyam Bhajan", singer: "Sonotek", category: "Shyam", subtitle: "Khatu Shyam Bhajan" },
+  { id: "nqgCxrkFmsE", title: "Bhajan", singer: "Sonotek", category: "Bhajan", subtitle: "Devotional Bhajan" },
+  { id: "wdSwi4W6_co", title: "Bhajan", singer: "Sonotek", category: "Bhajan", subtitle: "Devotional Bhajan" },
+  { id: "m8sGCs_DcZs", title: "Bhajan", singer: "Sonotek", category: "Bhajan", subtitle: "Devotional Bhajan" },
+  { id: "stmMozD47Zg", title: "Bhajan", singer: "Sonotek", category: "Bhajan", subtitle: "Devotional Bhajan" },
+  { id: "gog4g2WWfqw", title: "Bhajan", singer: "Sonotek", category: "Bhajan", subtitle: "Devotional Bhajan" },
+  { id: "YpGe7j5cwXo", title: "Bhajan", singer: "Sonotek", category: "Bhajan", subtitle: "Devotional Bhajan" },
 ];
 
 export const traditions = [
@@ -101,32 +101,11 @@ export const traditions = [
 
 export const artists = [
   {
-    slug: "riya-brajwasi",
-    name: "Riya Brajwasi",
-    specialty: "Hanuman · Ram · Krishna Bhajan",
-    description: "A celebrated devotional singer known for her soul-stirring Hanuman and Ram bhajans. Her voice carries the essence of Braj bhakti, touching hearts at every gathering.",
-    videos: ["jyvkvwywoko", "pZDY5HXKQTU", "CnVY0fUmfkg"],
-  },
-  {
-    slug: "anjali-jain",
-    name: "Anjali Jain",
-    specialty: "Shiva · Mata · Ram Bhajan",
-    description: "Known for her mellifluous voice and devotional depth, Anjali Jain brings warmth and grace to every performance — from intimate Shiva bhajans to vibrant Mata ki Chowki.",
-    videos: ["q7YqSWCeMNw", "r_K0Lf_BCZU", "9zDSG_7cxEo", "b0oUszdGkX4"],
-  },
-  {
-    slug: "yashpreet-kaur",
-    name: "Yashpreet Kaur",
-    specialty: "Shiva · Katha",
-    description: "A powerful vocalist with a gift for Shiva bhajans and devotional kathas. Yashpreet's performances blend classical devotion with a contemporary spiritual energy.",
-    videos: ["ASB7jrGXFos", "Nt_JeRrV_D4"],
-  },
-  {
-    slug: "rajesh-madina",
-    name: "Rajesh Madina",
-    specialty: "Hanuman · Goga Ji · Katha",
-    description: "Rajesh Madina is renowned for his folk-rooted devotional style, bringing life to Hanuman kathas and Goga Ji bhajans with authentic rural bhakti tradition.",
-    videos: ["ASB7jrGXFos", "K6HFMcwl-G4", "UdZ3hQUuLWo"],
+    slug: "pramod-ajmeriya",
+    name: "Bhajan Samrat Pramod Ajmeriya",
+    specialty: "Devotional Singer · Sonotek",
+    description: "Bhajan Samrat Pramod Ajmeriya is a celebrated devotional singer renowned for his soul-stirring Hanuman and Khatu Shyam bhajans.",
+    videos: ["bvYoTfjCmY0", "JSooAKbDF_Y", "nqgCxrkFmsE", "wdSwi4W6_co", "m8sGCs_DcZs", "stmMozD47Zg", "gog4g2WWfqw", "YpGe7j5cwXo"],
   },
 ];
 

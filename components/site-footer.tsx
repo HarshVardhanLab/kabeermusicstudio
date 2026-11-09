@@ -7,13 +7,13 @@ export default function SiteFooter() {
     <footer className="footer">
       <Link className="brand brand-footer" href="/">
         <span className="brand-mark"><span>ॐ</span></span>
-        <span className="brand-copy"><strong>Bhajan Kirtan</strong><small>SONOTEK</small></span>
+        <span className="brand-copy"><strong>Pramod Ajmeriya</strong><small>BHAJAN SAMRAT</small></span>
       </Link>
       <p><Localized>Devotional music for moments that bring us together.</Localized></p>
       <div className="footer-links">
         <Link href="/programs"><Localized>Programs</Localized></Link>
         <Link href="/traditions"><Localized>Traditions</Localized></Link>
-        <Link href="/artists"><Localized>Artists</Localized></Link>
+        <Link href="/about"><Localized>Bhajan Samrat</Localized></Link>
         <Link href="/videos"><Localized>Performances</Localized></Link>
         <Link href="/faq"><Localized>FAQs</Localized></Link>
         <a href={channelUrl} target="_blank" rel="noreferrer">
@@ -24,7 +24,7 @@ export default function SiteFooter() {
         </a>
       </div>
       <div className="footer-bottom">
-        <span>© {new Date().getFullYear()} Bhajan Kirtan Sonotek</span>
+        <span>© {new Date().getFullYear()} Bhajan Samrat Pramod Ajmeriya</span>
         <span><Localized>Enquiries are subject to availability and confirmation.</Localized></span>
       </div>
     </footer>

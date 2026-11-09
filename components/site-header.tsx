@@ -17,9 +17,9 @@ export default function SiteHeader() {
 
   return (
     <header className="site-header" id="top">
-      <Link className="brand" href="/" aria-label="Bhajan Kirtan Sonotek home" onClick={close}>
+      <Link className="brand" href="/" aria-label="Bhajan Samrat Pramod Ajmeriya home" onClick={close}>
         <span className="brand-mark" aria-hidden="true"><span>ॐ</span></span>
-        <span className="brand-copy"><strong>Bhajan Kirtan</strong><small>SONOTEK</small></span>
+        <span className="brand-copy"><strong>Pramod Ajmeriya</strong><small>BHAJAN SAMRAT</small></span>
       </Link>
       <button
         className="menu-toggle"
@@ -35,9 +35,8 @@ export default function SiteHeader() {
         {navLink("/", "Home")}
         {navLink("/programs", "Programs")}
         {navLink("/traditions", "Traditions")}
-        {navLink("/artists", "Artists")}
         {navLink("/videos", "Performances")}
-        {navLink("/about", "Our story")}
+        {navLink("/about", "Bhajan Samrat")}
         <details className="nav-more" open={moreOpen} onToggle={event => setMoreOpen((event.currentTarget as HTMLDetailsElement).open)}>
           <summary>{t("More")} <span aria-hidden="true">expand_more</span></summary>
           <div className="nav-dropdown"><Link href="/faq" onClick={() => { close(); setMoreOpen(false); }}>{t("FAQs")}</Link><Link href="/contact" onClick={() => { close(); setMoreOpen(false); }}>{t("Contact")}</Link></div>

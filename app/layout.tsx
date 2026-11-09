@@ -15,12 +15,12 @@ const notoDevanagari = Noto_Sans_Devanagari({ subsets: ["devanagari"], variable:
 export const metadata: Metadata = {
   ...(process.env.NEXT_PUBLIC_SITE_URL ? { metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL) } : {}),
   title: {
-    default: "Bhajan Kirtan Sonotek — Make room for devotion",
-    template: "%s | Bhajan Kirtan Sonotek",
+    default: "Bhajan Samrat Pramod Ajmeriya — Make room for devotion",
+    template: "%s | Bhajan Samrat Pramod Ajmeriya",
   },
   description: "Explore devotional performances and enquire about a bhajan or kirtan for your occasion.",
   openGraph: {
-    title: "Bhajan Kirtan Sonotek — Make room for devotion",
+    title: "Bhajan Samrat Pramod Ajmeriya — Make room for devotion",
     description: "Explore devotional performances and enquire about a bhajan or kirtan for your occasion.",
     type: "website",
     locale: "en_IN",
