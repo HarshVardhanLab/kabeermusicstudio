@@ -1344,6 +1344,7 @@ html[lang="hi"] h1,html[lang="hi"] h2,html[lang="hi"] h3{line-height:1.25;letter
   height:auto;
   aspect-ratio:1;
   top:clamp(36px,4.5vw,72px);
+  animation:fade-in 1.1s .1s both;
   background:radial-gradient(circle at 50% 45%,#f8ead1 0 27%,#ead0a4 27.5% 28%,#f0dfc5 28.5% 49%,rgba(218,184,137,.2) 49.4% 50%,transparent 50.5%);
 }
 .about-hero-diya .art-halo{width:68%;height:68%;}
